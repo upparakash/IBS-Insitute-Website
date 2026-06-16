@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  body {
+    @apply font-sans antialiased text-gray-900 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-accent {
+    @apply bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-gold {
+    @apply bg-gold hover:bg-gold/90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md rounded-2xl shadow-xl border border-gray-100;
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-accent;
+  }
+
+  .gradient-gold {
+    @apply bg-gradient-to-r from-gold to-yellow-600;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A3A6B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}

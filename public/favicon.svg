@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Dark blue rounded square background -->
+  <rect width="64" height="64" rx="12" fill="#1A3A6B"/>
+  <!-- Orange dot (top-left, like the IBS logo) -->
+  <circle cx="14" cy="14" r="6" fill="#E8601A"/>
+  <!-- White "IBS" text styled letters -->
+  <!-- I -->
+  <rect x="10" y="26" width="6" height="24" rx="2" fill="white"/>
+  <!-- B -->
+  <rect x="20" y="26" width="5" height="24" rx="2" fill="white"/>
+  <rect x="20" y="26" width="14" height="10" rx="4" fill="white"/>
+  <rect x="20" y="40" width="14" height="10" rx="4" fill="white"/>
+  <!-- S -->
+  <path d="M38 26h14a2 2 0 0 1 0 4H40a4 4 0 0 0 0 8h10a4 4 0 0 1 0 8H38a2 2 0 0 1 0-4h10a0 0 0 0 0 0-8H38a4 4 0 0 1 0-8z" fill="white"/>
+</svg>
