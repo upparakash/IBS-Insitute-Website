@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../layouts/Layout';
+import SEOHead from '../components/SEOHead';
 import { BLOGS } from '../data/siteData';
 import { FaClock, FaCalendarAlt, FaSearch, FaArrowRight, FaTag } from 'react-icons/fa';
 
@@ -8,10 +9,10 @@ const CATEGORIES = ['All', 'JAIIB', 'CAIIB', 'RBI', 'Bank PO', 'Current Affairs'
 
 const EXTENDED_BLOGS = [
   ...BLOGS,
-  { id: 5, title: 'IBPS PO 2025 Notification: Complete Analysis & Eligibility', category: 'Bank PO', excerpt: 'IBPS PO 2025 full notification breakdown — vacancies, age limit, qualification, exam pattern and key dates you must know.', date: 'June 10, 2025', readTime: '7 min read', color: 'from-green-500 to-green-600', href: '/blog/ibps-po-2025' },
-  { id: 6, title: 'CAIIB BFM Module: Complete Study Strategy 2025', category: 'CAIIB', excerpt: 'Master the BFM (Bank Financial Management) module in CAIIB with this structured, topic-wise study plan used by our toppers.', date: 'June 8, 2025', readTime: '9 min read', color: 'from-violet-500 to-violet-600', href: '/blog/caiib-bfm-strategy' },
-  { id: 7, title: 'SSC CGL 2025: Tier 1 Strategy & Last Month Revision Plan', category: 'SSC', excerpt: 'Last month strategy for SSC CGL Tier 1 — subject-wise prioritization, mock test schedule and revision techniques.', date: 'June 5, 2025', readTime: '8 min read', color: 'from-red-500 to-red-600', href: '/blog/ssc-cgl-tier1-strategy' },
-  { id: 8, title: 'Banking Terminology Glossary: 200 Must-Know Terms', category: 'JAIIB', excerpt: 'Comprehensive banking glossary covering JAIIB, CAIIB and banking interview terms — from NPA to Basel norms.', date: 'June 2, 2025', readTime: '15 min read', color: 'from-teal-500 to-teal-600', href: '/blog/banking-glossary' },
+  { id: 5, title: 'IBPS RRB PO 2026 Notification: Complete Analysis & Eligibility', category: 'Bank PO', excerpt: 'IBPS RRB PO 2026 full notification breakdown — vacancies, age limit, qualification, exam pattern and key dates you must know.', date: 'July 2, 2026', readTime: '7 min read', color: 'from-green-500 to-green-600', href: '/blog/ibps-rrb-2026' },
+  { id: 6, title: 'CAIIB BFM Module: Complete Study Strategy 2026', category: 'CAIIB', excerpt: 'Master the BFM (Bank Financial Management) module in CAIIB with this structured, topic-wise study plan used by our toppers.', date: 'June 28, 2026', readTime: '9 min read', color: 'from-violet-500 to-violet-600', href: '/blog/caiib-bfm-strategy' },
+  { id: 7, title: 'JAIIB November 2026: 4-Paper Strategy & Study Plan', category: 'JAIIB', excerpt: 'Complete study strategy for JAIIB November 2026 — paper-wise prioritisation, revision schedule and last-month tips from IBS toppers.', date: 'June 25, 2026', readTime: '8 min read', color: 'from-red-500 to-red-600', href: '/blog/jaiib-nov-2026-strategy' },
+  { id: 8, title: 'Banking Terminology Glossary: 200 Must-Know Terms for JAIIB & CAIIB', category: 'JAIIB', excerpt: 'Comprehensive banking glossary covering JAIIB, CAIIB and banking interview terms — from NPA to Basel norms to digital banking.', date: 'June 20, 2026', readTime: '15 min read', color: 'from-teal-500 to-teal-600', href: '/blog/banking-glossary' },
 ];
 
 export default function BlogPage() {
@@ -25,6 +26,12 @@ export default function BlogPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Banking Exam Blog | JAIIB CAIIB Tips, Study Guides & Current Affairs | IBS Bank Career"
+        description="Free banking exam study guides, JAIIB & CAIIB preparation tips, current affairs, and exam notifications from IBS Bank Career — Kerala's #1 banking coaching institute."
+        keywords="JAIIB study tips, CAIIB preparation guide, banking exam blog, RBI Grade B notes, bank PO tips, IIBF exam guide, banking current affairs, IBS blog"
+        canonical="/blog"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-accent py-16">
         <div className="container-custom text-center">

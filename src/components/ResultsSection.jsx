@@ -74,9 +74,11 @@ export default function ResultsSection() {
                 <div className="text-xs text-accent font-semibold mt-1">{topper.exam} • {topper.year}</div>
               </div>
 
-              <div className="text-sm text-gray-600 italic">
-                "IBS Bank Career's methodology and faculty helped me achieve this remarkable result!"
-              </div>
+              {topper.quote && (
+                <div className="text-xs text-gray-500 italic leading-relaxed border-t border-gray-100 pt-3">
+                  "{topper.quote}"
+                </div>
+              )}
             </div>
           ))}
         </div>

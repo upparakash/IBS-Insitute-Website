@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../layouts/Layout';
+import SEOHead from '../components/SEOHead';
 import { FaBriefcase, FaMapMarkerAlt, FaClock, FaRupeeSign, FaArrowRight, FaUsers, FaGraduationCap, FaHandshake } from 'react-icons/fa';
 
 const OPENINGS = [
@@ -25,6 +26,12 @@ export default function CareersPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Careers at IBS Bank Career | Banking Faculty & Staff Jobs | Kerala"
+        description="Join IBS Bank Career — India's leading banking coaching institute. We're hiring JAIIB/CAIIB faculty, content writers, digital marketers and operations staff across Kerala."
+        keywords="IBS Bank Career jobs, banking faculty jobs Kerala, JAIIB CAIIB faculty vacancy, banking coaching institute jobs, banking education careers Kerala"
+        canonical="/careers"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-accent py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '30px 30px' }} />

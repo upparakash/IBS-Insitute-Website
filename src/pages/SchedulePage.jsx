@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../layouts/Layout';
+import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaClock, FaUsers, FaArrowRight, FaChair, FaPhone } from 'react-icons/fa';
 import { SCHEDULE, SITE } from '../data/siteData';
@@ -18,6 +19,12 @@ export default function SchedulePage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Upcoming Batch Schedule 2026 | JAIIB CAIIB Bank PO Classes | IBS Bank Career"
+        description="Check IBS Bank Career's upcoming batch schedule for JAIIB, CAIIB, bank promotion and Bank PO courses. July–August 2026 batches starting soon. Limited seats — enroll now."
+        keywords="JAIIB batch July 2026, CAIIB batch August 2026, banking class schedule Kerala, IBS batch dates, bank exam coaching timetable, IIBF course schedule"
+        canonical="/schedule"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-accent py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '30px 30px' }} />

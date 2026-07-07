@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Layout from '../layouts/Layout';
+import SEOHead from '../components/SEOHead';
 import { FaCheckCircle, FaArrowRight, FaTrophy, FaUsers, FaStar, FaUniversity, FaLinkedin } from 'react-icons/fa';
 
 const MILESTONES = [
@@ -21,6 +22,12 @@ const VALUES = [
 export default function AboutPage() {
   return (
     <Layout>
+      <SEOHead
+        title="About IBS Bank Career | Founded 2011 | Mr. Satheesh Kumar S | Kayamkulam Kerala"
+        description="Learn about IBS Institute of Banking Studies – founded in 2011 by Mr. Satheesh Kumar S, seasoned banker and visionary educator. 15+ years, 12 centres, 50,000+ students across Kerala. IIBF Authorised."
+        keywords="IBS Bank Career about, IBS Institute of Banking Studies Kayamkulam, Satheesh Kumar S banking institute, banking coaching Kerala history, IIBF authorised centre Kerala"
+        canonical="/about"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-accent py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
@@ -33,7 +40,7 @@ export default function AboutPage() {
             <span className="text-gold">Banking Coaching Institute</span>
           </h1>
           <p className="text-white/80 text-lg max-w-3xl mx-auto mb-8">
-            Building banking careers since 2012 — with expert faculty, proven methodology, and an unbreakable commitment to student success.
+            Building banking careers since 2011 — with expert faculty, proven methodology, and an unbreakable commitment to student success.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/courses" className="btn-gold flex items-center gap-2">Explore Courses <FaArrowRight size={12} /></Link>
@@ -48,7 +55,7 @@ export default function AboutPage() {
           {[
             { icon: <FaUsers className="text-primary" size={28} />, val: '50,000+', lbl: 'Students Enrolled' },
             { icon: <FaTrophy className="text-gold" size={28} />, val: '94%', lbl: 'Pass Rate' },
-            { icon: <FaStar className="text-yellow-500" size={28} />, val: '12+', lbl: 'Years of Excellence' },
+            { icon: <FaStar className="text-yellow-500" size={28} />, val: '15+', lbl: 'Years of Excellence' },
             { icon: <FaUniversity className="text-accent" size={28} />, val: '30+', lbl: 'Courses' },
           ].map(({ icon, val, lbl }) => (
             <div key={lbl} className="flex flex-col items-center gap-2 p-6">
@@ -127,7 +134,7 @@ export default function AboutPage() {
               </div>
               <div className="lg:col-span-3 p-8 lg:p-10">
                 <div className="inline-flex items-center gap-2 bg-gold/10 text-gold text-xs font-bold px-3 py-1 rounded-full mb-4">
-                  🏦 Seasoned Banker · Visionary Educator · 14+ Years
+                  🏦 Seasoned Banker · Visionary Educator · 15+ Years
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4">Transforming Banking Education in Kerala</h3>
                 <div className="space-y-3 text-gray-600 text-sm leading-relaxed">
@@ -137,7 +144,7 @@ export default function AboutPage() {
                 </div>
                 <div className="mt-6 grid grid-cols-3 gap-4 border-t border-gray-100 pt-6">
                   {[
-                    { val: '14+', lbl: 'Years of Excellence' },
+                    { val: '15+', lbl: 'Years of Excellence' },
                     { val: '12', lbl: 'Centres Across Kerala' },
                     { val: '50K+', lbl: 'Students Mentored' },
                   ].map(({ val, lbl }) => (

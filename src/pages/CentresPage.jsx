@@ -1,4 +1,5 @@
 import Layout from '../layouts/Layout';
+import SEOHead from '../components/SEOHead';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { CENTRES } from '../data/siteData';
@@ -10,6 +11,12 @@ export default function CentresPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="12 Coaching Centres Across Kerala | IBS Bank Career | Kayamkulam Trivandrum Kochi"
+        description="IBS Bank Career has 12 centres across Kerala – Head Office in Kayamkulam, Corporate Office in Thiruvananthapuram, and branches in Ernakulam, Calicut, Thrissur, Kollam, Kottayam and more. Visit us for JAIIB, CAIIB coaching."
+        keywords="IBS Bank Career centres Kerala, JAIIB coaching centre Kayamkulam, banking coaching Thiruvananthapuram, banking coaching Ernakulam, CAIIB coaching Calicut, banking institute branches Kerala"
+        canonical="/centres"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-accent py-16">
         <div className="container-custom text-center">

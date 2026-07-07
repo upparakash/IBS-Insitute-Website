@@ -2,25 +2,23 @@ import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
-  FaTachometerAlt, FaUsers, FaBook, FaClipboardList, FaChalkboardTeacher,
-  FaCreditCard, FaBullhorn, FaBlog, FaCog, FaSignOutAlt, FaBars, FaTimes,
-  FaBell, FaSearch, FaChartLine, FaQuestionCircle, FaTags
+  FaTachometerAlt, FaUsers, FaBook,
+  FaCreditCard, FaCog, FaSignOutAlt, FaBars,
+  FaBell, FaSearch, FaChartLine, FaQuestionCircle,
+  FaClipboardList, FaNewspaper, FaLayerGroup
 } from 'react-icons/fa';
 
 export const ADMIN_NAV = [
-  { icon: FaTachometerAlt, label: 'Dashboard', href: '/admin' },
-  { icon: FaUsers, label: 'Students', href: '/admin/students' },
-  { icon: FaBook, label: 'Courses', href: '/admin/courses' },
-  { icon: FaChalkboardTeacher, label: 'Faculty', href: '/admin/faculty' },
-  { icon: FaClipboardList, label: 'Mock Tests', href: '/admin/tests' },
-  { icon: FaQuestionCircle, label: 'Question Bank', href: '/admin/questions' },
-  { icon: FaCreditCard, label: 'Payments', href: '/admin/payments' },
-  { icon: FaBullhorn, label: 'Banners', href: '/admin/banners' },
-  { icon: FaBell, label: 'Notifications', href: '/admin/notifications' },
-  { icon: FaBlog, label: 'Blog Manager', href: '/admin/blog' },
-  { icon: FaTags, label: 'SEO Manager', href: '/admin/seo' },
-  { icon: FaChartLine, label: 'Analytics', href: '/admin/analytics' },
-  { icon: FaCog, label: 'Settings', href: '/admin/settings' },
+  { icon: FaTachometerAlt, label: 'Dashboard',    href: '/admin' },
+  { icon: FaUsers,         label: 'Students',     href: '/admin/students' },
+  { icon: FaBook,          label: 'Courses',      href: '/admin/courses' },
+  { icon: FaLayerGroup,    label: 'Exam Pages',   href: '/admin/exams' },
+  { icon: FaNewspaper,     label: 'Resources',    href: '/admin/resources' },
+  { icon: FaQuestionCircle,label: 'Question Bank',href: '/admin/questions' },
+  { icon: FaCreditCard,    label: 'Payments',     href: '/admin/payments' },
+  { icon: FaBell,          label: 'Notifications',href: '/admin/notifications' },
+  { icon: FaChartLine,     label: 'Analytics',    href: '/admin/analytics' },
+  { icon: FaCog,           label: 'Settings',     href: '/admin/settings' },
 ];
 
 export default function AdminLayout({ children }) {

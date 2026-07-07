@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../layouts/Layout';
+import SEOHead from '../components/SEOHead';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaPaperPlane } from 'react-icons/fa';
 import { SITE } from '../data/siteData';
 
@@ -15,6 +16,12 @@ export default function ContactPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Contact IBS Bank Career | Kayamkulam Kerala | +91 81389 62298"
+        description="Contact IBS Institute of Banking Studies – Head Office: Kayamkulam, Kerala. Call +91 81389 62298 | +91 75590 00083. WhatsApp, email, and 12 branch offices across Kerala. Enquire about JAIIB, CAIIB, Bank PO courses."
+        keywords="IBS Bank Career contact, banking coaching centre Kayamkulam, JAIIB coaching enquiry Kerala, contact banking institute Kerala, IBS phone number address"
+        canonical="/contact"
+      />
       <section className="bg-gradient-to-br from-primary to-accent py-16">
         <div className="container-custom text-center">
           <h1 className="font-heading text-4xl lg:text-5xl font-bold text-white mb-3">Get in Touch</h1>

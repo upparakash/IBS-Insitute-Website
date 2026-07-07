@@ -15,19 +15,19 @@ export default function TopBar() {
   const [activeLang, setActiveLang] = useState('English');
 
   return (
-    <div className="bg-primary text-white text-xs">
-      <div className="container-custom flex flex-wrap items-center justify-between py-2 gap-2">
+    <div className="bg-[#0B1F3E] text-white text-xs">
+      <div className="w-full px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between py-2.5 gap-2">
         {/* Left — contact */}
         <div className="flex items-center gap-4">
-          <a href={`tel:${SITE.phone}`} className="flex items-center gap-1 hover:text-gold transition-colors">
+          <a href={`tel:${SITE.phone}`} className="flex items-center gap-1.5 hover:text-gold transition-colors">
             <FaPhone className="text-gold text-[10px]" />
             {SITE.phone}
           </a>
-          <a href={`tel:${SITE.phone2}`} className="hidden md:flex items-center gap-1 hover:text-gold transition-colors">
+          <a href={`tel:${SITE.phone2}`} className="hidden md:flex items-center gap-1.5 hover:text-gold transition-colors">
             <FaPhone className="text-gold text-[10px]" />
             {SITE.phone2}
           </a>
-          <a href={`mailto:${SITE.email}`} className="hidden lg:flex items-center gap-1 hover:text-gold transition-colors">
+          <a href={`mailto:${SITE.email}`} className="hidden lg:flex items-center gap-1.5 hover:text-gold transition-colors">
             <FaEnvelope className="text-gold text-[10px]" />
             {SITE.email}
           </a>
@@ -36,11 +36,11 @@ export default function TopBar() {
         {/* Right */}
         <div className="flex items-center gap-3">
           {/* Social icons */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-3">
             {socialLinks.map(({ icon: Icon, href, color }) => (
               <a key={href} href={href} target="_blank" rel="noopener noreferrer"
-                className={`text-gray-300 transition-colors ${color}`}>
-                <Icon size={13} />
+                className={`text-gray-400 transition-colors ${color}`}>
+                <Icon size={14} />
               </a>
             ))}
           </div>

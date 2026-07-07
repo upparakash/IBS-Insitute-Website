@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Block auth and private areas
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+
+# Allow important assets
+Allow: /images/
+Allow: /logo-blue.png
+Allow: /logo-white.png
+
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://ibsbankcareer.in/sitemap.xml

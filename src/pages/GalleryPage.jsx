@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../layouts/Layout';
+import SEOHead from '../components/SEOHead';
 import { FaTimes, FaChevronLeft, FaChevronRight, FaImage } from 'react-icons/fa';
 
 const GALLERY_ITEMS = [
@@ -38,6 +39,12 @@ export default function GalleryPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Photo Gallery | IBS Bank Career | Classrooms, Events & Topper Felicitations"
+        description="Explore IBS Bank Career's gallery — classroom photos, JAIIB CAIIB topper felicitation events, faculty sessions, and our centres across Kerala."
+        keywords="IBS Bank Career gallery, banking coaching photos, JAIIB topper event, CAIIB results, IBS Kerala photos, banking institute gallery"
+        canonical="/gallery"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-accent py-16">
         <div className="container-custom text-center">

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Layout from '../layouts/Layout';
+import SEOHead from '../components/SEOHead';
 import { FaStar, FaPlay, FaQuoteLeft } from 'react-icons/fa';
 
 const TESTIMONIAL_DATA = [
@@ -23,6 +24,12 @@ export default function TestimonialsPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Student Success Stories | JAIIB CAIIB Toppers | IBS Bank Career Reviews"
+        description="2,000+ student reviews from IBS Bank Career — real JAIIB toppers, CAIIB success stories, RBI Grade B selections and bank promotion success across Kerala and India."
+        keywords="IBS Bank Career reviews, JAIIB success stories, CAIIB toppers Kerala, bank coaching testimonials, banking exam pass rate, IBS student results"
+        canonical="/testimonials"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-accent py-16">
         <div className="container-custom text-center">

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Home -->
+  <url>
+    <loc>https://ibsbankcareer.in/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ibsbankcareer.in/images/banners/desktop-1.jpg</image:loc>
+      <image:title>IBS Institute of Banking Studies – 15 Years of Excellence</image:title>
+    </image:image>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://ibsbankcareer.in/about</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Courses landing -->
+  <url>
+    <loc>https://ibsbankcareer.in/courses</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Individual course pages -->
+  <url>
+    <loc>https://ibsbankcareer.in/courses/jaiib</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://ibsbankcareer.in/courses/caiib</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://ibsbankcareer.in/courses/bank-po</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ibsbankcareer.in/courses/rbi-grade-b</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ibsbankcareer.in/courses/ssc</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ibsbankcareer.in/courses/internal-promotions</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ibsbankcareer.in/courses/dra</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://ibsbankcareer.in/courses/certificate</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://ibsbankcareer.in/courses/diploma</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Faculty -->
+  <url>
+    <loc>https://ibsbankcareer.in/faculty</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Results / Hall of Fame -->
+  <url>
+    <loc>https://ibsbankcareer.in/results</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Testimonials -->
+  <url>
+    <loc>https://ibsbankcareer.in/testimonials</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Centres -->
+  <url>
+    <loc>https://ibsbankcareer.in/centres</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Schedule -->
+  <url>
+    <loc>https://ibsbankcareer.in/schedule</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://ibsbankcareer.in/blog</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Notifications -->
+  <url>
+    <loc>https://ibsbankcareer.in/notifications</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Gallery -->
+  <url>
+    <loc>https://ibsbankcareer.in/gallery</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://ibsbankcareer.in/contact</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Mock Tests -->
+  <url>
+    <loc>https://ibsbankcareer.in/mock-tests</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>

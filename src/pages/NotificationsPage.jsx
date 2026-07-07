@@ -1,20 +1,21 @@
 import { useState } from 'react';
 import Layout from '../layouts/Layout';
+import SEOHead from '../components/SEOHead';
 import { FaBell, FaCalendarAlt, FaArrowRight, FaExternalLinkAlt, FaSearch } from 'react-icons/fa';
 
 const NOTIFICATIONS = [
-  { id: 1, title: 'JAIIB May/June 2025 Exam Registration Begins', date: 'June 30, 2025', category: 'JAIIB', type: 'Registration', priority: 'high', link: '#', desc: 'IIBF has opened registrations for JAIIB May/June 2025 examination. Last date to apply is July 20, 2025.' },
-  { id: 2, title: 'CAIIB November 2025 Notification Released', date: 'June 28, 2025', category: 'CAIIB', type: 'Notification', priority: 'high', link: '#', desc: 'CAIIB November 2025 official notification released. Exams will be held on November 22-23, 2025.' },
-  { id: 3, title: 'IBPS PO 2025-26 Official Notification', date: 'June 25, 2025', category: 'Bank PO', type: 'Notification', priority: 'high', link: '#', desc: 'IBPS has released official notification for IBPS PO 2025-26 with 4455 vacancies across member banks.' },
-  { id: 4, title: 'RBI Grade B 2025 Preliminary Exam Date Announced', date: 'June 20, 2025', category: 'RBI Grade B', type: 'Exam Date', priority: 'high', link: '#', desc: 'RBI Grade B 2025 Phase 1 examination scheduled for August 17, 2025. Admit cards available from August 5.' },
-  { id: 5, title: 'SSC CGL 2025 Tier 1 Exam Schedule Released', date: 'June 18, 2025', category: 'SSC', type: 'Exam Date', priority: 'medium', link: '#', desc: 'SSC CGL 2025 Tier 1 will be held from September 13 to September 30, 2025.' },
-  { id: 6, title: 'SBI PO 2025 Final Results Declared', date: 'June 15, 2025', category: 'Bank PO', type: 'Result', priority: 'high', link: '#', desc: 'SBI PO 2025 final merit list published. 2,000 candidates selected across all circles.' },
-  { id: 7, title: 'IBPS Clerk 2025-26 Notification Expected in August', date: 'June 12, 2025', category: 'Bank PO', type: 'Alert', priority: 'medium', link: '#', desc: 'IBPS Clerk 2025-26 notification expected in second week of August 2025.' },
-  { id: 8, title: 'JAIIB New Syllabus Implementation from 2025', date: 'June 10, 2025', category: 'JAIIB', type: 'Syllabus', priority: 'medium', link: '#', desc: 'IIBF has revised JAIIB syllabus effective from November 2025 exams. Check new module structure.' },
-  { id: 9, title: 'RBI Assistant 2025 Notification Released', date: 'June 8, 2025', category: 'RBI Grade B', type: 'Notification', priority: 'medium', link: '#', desc: 'RBI has released notification for 926 Assistant vacancies. Online application window opens July 1.' },
-  { id: 10, title: 'NABARD Grade A 2025 Exam Date Announced', date: 'June 5, 2025', category: 'Other', type: 'Exam Date', priority: 'low', link: '#', desc: 'NABARD Grade A 2025 preliminary exam date announced as August 10, 2025.' },
-  { id: 11, title: 'CAIIB ABM Module Change Effective November 2025', date: 'June 2, 2025', category: 'CAIIB', type: 'Syllabus', priority: 'medium', link: '#', desc: 'Important changes announced in CAIIB ABM module topics. New case study based questions added.' },
-  { id: 12, title: 'IIBF DRA Exam Results — March 2025 Batch', date: 'May 30, 2025', category: 'DRA', type: 'Result', priority: 'low', link: '#', desc: 'DRA exam results for March 2025 batch declared. Pass percentage: 78%.' },
+  { id: 1, title: 'JAIIB November 2026 Exam — Registration Closes 31 August 2026', date: 'July 5, 2026', category: 'JAIIB', type: 'Registration', priority: 'high', link: '#', desc: 'IIBF has opened registrations for JAIIB November 2026 examination. Last date to register is 31 August 2026. Exam likely in November 2026.' },
+  { id: 2, title: 'CAIIB November 2026 Notification Released', date: 'July 3, 2026', category: 'CAIIB', type: 'Notification', priority: 'high', link: '#', desc: 'CAIIB November 2026 official notification released. Registration closes 31 August 2026. Begin preparation now.' },
+  { id: 3, title: 'IBPS RRB PO / Clerk 2026 — Apply Before 5 July 2026', date: 'July 1, 2026', category: 'Bank PO', type: 'Notification', priority: 'high', link: '#', desc: 'IBPS RRB PO and Office Assistant (Clerk) 2026 notification is out. Online applications close July 5, 2026. Prelims expected in August 2026.' },
+  { id: 4, title: 'SBI JIBO Notification Out — Apply by 15 July 2026', date: 'June 30, 2026', category: 'Bank PO', type: 'Notification', priority: 'high', link: '#', desc: 'SBI Junior India Based Officer (JIBO) internal promotion notification released. Eligible SBI clerical staff must apply by 15 July 2026.' },
+  { id: 5, title: 'RBI Assistant 2026 Notification — Apply by 10 July 2026', date: 'June 28, 2026', category: 'RBI Grade B', type: 'Notification', priority: 'high', link: '#', desc: 'RBI has released notification for RBI Assistant 2026 vacancies. Online application closes July 10, 2026. Prelims expected in August 2026.' },
+  { id: 6, title: 'SBI Circle Based Officer 2026 — Last Date 20 July 2026', date: 'June 25, 2026', category: 'Bank PO', type: 'Notification', priority: 'high', link: '#', desc: 'SBI Circle Based Officer notification is out. Online applications close July 20, 2026. This is a direct officer recruitment.' },
+  { id: 7, title: 'IIBF Certificate Exam Schedule August 2026 Released', date: 'June 22, 2026', category: 'JAIIB', type: 'Exam Date', priority: 'medium', link: '#', desc: 'IIBF has released the certificate examination schedule for August 2026. Courses include Digital Banking, AML/KYC, DRA, BC-BF and more. Register before seats close.' },
+  { id: 8, title: 'SBI & IBPS Exam Calendar 2026-27 Released', date: 'June 20, 2026', category: 'Bank PO', type: 'Alert', priority: 'medium', link: '#', desc: 'SBI, IBPS and RRB have released their tentative exam calendar for 2026-27. Plan your preparation accordingly. Key dates include IBPS PO Oct 2026, SBI PO Dec 2026.' },
+  { id: 9, title: 'JAIIB New 4-Paper Pattern Effective 2025 — What Changed', date: 'June 18, 2026', category: 'JAIIB', type: 'Syllabus', priority: 'medium', link: '#', desc: 'IIBF revised JAIIB pattern to 4 papers (IE&IFS, PPB, AFM, RBWM) effective 2025. Old 3-paper structure no longer applies. IBS coaching covers new pattern comprehensively.' },
+  { id: 10, title: 'CAIIB Elective Paper Options 2026 — Choose Wisely', date: 'June 15, 2026', category: 'CAIIB', type: 'Syllabus', priority: 'medium', link: '#', desc: 'CAIIB candidates must choose one elective paper: Rural Banking, Financial Advising, HRM, IT & Digital Banking, or Central Banking. IBS coaches all 5 electives.' },
+  { id: 11, title: 'IBS New Batch Starting 17 July 2026 — IBPS/SBI/RRB/RBI', date: 'June 12, 2026', category: 'Bank PO', type: 'Alert', priority: 'medium', link: '#', desc: 'IBS Bank Career\'s Online Evening Batch for IBPS PO, SBI PO, RRB PO, and RBI Assistant starts July 17, 2026. Evening timing (6–9 PM). Limited seats — enroll now.' },
+  { id: 12, title: 'IIBF DRA Exam Results — April 2026 Batch', date: 'June 10, 2026', category: 'DRA', type: 'Result', priority: 'low', link: '#', desc: 'DRA exam results for April 2026 batch declared by IIBF. 91% pass rate. IBS students achieved outstanding results in this batch.' },
 ];
 
 const CATEGORIES = ['All', 'JAIIB', 'CAIIB', 'Bank PO', 'RBI Grade B', 'SSC', 'DRA', 'Other'];
@@ -44,6 +45,12 @@ export default function NotificationsPage() {
 
   return (
     <Layout>
+      <SEOHead
+        title="Banking Exam Notifications 2026 | JAIIB CAIIB IBPS SBI RBI | IBS Bank Career"
+        description="Latest banking exam notifications 2026 — JAIIB, CAIIB registration, IBPS PO, SBI Clerk, RBI Assistant, IIBF certificate exam schedules. Stay updated with IBS Bank Career."
+        keywords="JAIIB 2026 notification, CAIIB exam date 2026, IBPS PO 2026 notification, banking exam calendar 2026, bank exam alert, IIBF exam schedule 2026"
+        canonical="/notifications"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary to-accent py-16">
         <div className="container-custom text-center">

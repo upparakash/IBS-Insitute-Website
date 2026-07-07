@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "WebFetch(domain:ibsbankcareer.in)",
+      "Bash(find \"c:/Users/ADMIN/OneDrive/Desktop/IBS Insitute Website\" -name \"*.png\" -o -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.svg\" -o -name \"*.ico\" -o -name \"*.webp\" | grep -v node_modules | grep -v dist | grep -v \".vite\")",
+      "Read(//c/Users/ADMIN/OneDrive/Desktop/IBS Insitute Website/**)",
+      "PowerShell(Get-Process -Name \"node\" -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-ChildItem -Recurse \"c:\\\\Users\\\\ADMIN\\\\OneDrive\\\\Desktop\\\\IBS Insitute Website\\\\IBS Institute Website\\\\IBS Banner and Slider\" | Where-Object { !$_.PSIsContainer } | Select-Object Name, FullName, Length | Format-List)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\ADMIN\\\\OneDrive\\\\Desktop\\\\IBS Insitute Website\\\\IBS Institute Website\\\\public\\\\images\\\\banners\" | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,1\\)}})",
+      "PowerShell(netstat -ano)",
+      "Bash(npx vite *)"
+    ]
+  }
+}

@@ -1,10 +1,17 @@
 import Layout from '../layouts/Layout';
+import SEOHead from '../components/SEOHead';
 import { FACULTY } from '../data/siteData';
 import { FaStar, FaUsers, FaGraduationCap, FaBriefcase, FaLinkedin } from 'react-icons/fa';
 
 export default function FacultyPage() {
   return (
     <Layout>
+      <SEOHead
+        title="Expert Banking Faculty | 32 Retired Bankers | IBS Bank Career Kerala"
+        description="IBS Bank Career's faculty panel of 32 retired senior banking professionals from SBI, PNB, Canara Bank, RBI, ICICI with 20–35 years of real banking experience. Kerala's best JAIIB CAIIB coaching faculty."
+        keywords="JAIIB faculty Kerala, CAIIB coaching faculty, retired banker faculty, banking exam teachers Kerala, IBS Bank Career faculty, best banking coaching faculty Kerala"
+        canonical="/faculty"
+      />
       <section className="bg-gradient-to-br from-primary to-accent py-16">
         <div className="container-custom text-center">
           <h1 className="font-heading text-4xl lg:text-5xl font-bold text-white mb-3">Our Expert Faculty</h1>
