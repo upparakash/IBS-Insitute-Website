@@ -23,16 +23,17 @@ const ORG_JSON_LD = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+91-944-787-3644',
+    telephone: '+91-8138962298',
     contactType: 'customer service',
     areaServed: 'IN',
     availableLanguage: ['English', 'Hindi', 'Tamil', 'Telugu', 'Malayalam'],
   },
   sameAs: [
     'https://youtube.com/@ibsbankcareer',
-    'https://instagram.com/ibsbankcareer',
-    'https://facebook.com/ibsbankcareer',
-    'https://linkedin.com/company/ibsbankcareer',
+    'https://www.instagram.com/ibsbankcareer_',
+    'https://www.facebook.com/ibsbankcareer',
+    'https://www.linkedin.com/company/institute',
+    'https://x.com/ibsbankcareer',
   ],
   aggregateRating: {
     '@type': 'AggregateRating',

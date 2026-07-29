@@ -23,6 +23,8 @@ import FreeResourcesPage from './pages/resources/FreeResourcesPage';
 import InterviewPage from './pages/interview/InterviewPage';
 import BooksPage from './pages/books/BooksPage';
 import AppPage from './pages/AppPage';
+import YouTubeChannelsPage from './pages/YouTubeChannelsPage';
+import LegalPage from './pages/LegalPage';
 
 // Auth Pages
 import LoginPage from './pages/auth/LoginPage';
@@ -68,6 +70,7 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/results" element={<ResultsPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/more/youtube-channels" element={<YouTubeChannelsPage />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/careers" element={<CareersPage />} />
@@ -135,12 +138,13 @@ export default function App() {
             <Route path="/mock-tests" element={<CoursesPage />} />
             <Route path="/book-demo" element={<ContactPage />} />
             <Route path="/enroll" element={<ContactPage />} />
+            <Route path="/enquire" element={<ContactPage />} />
             <Route path="/batches" element={<HomePage />} />
             <Route path="/forgot-password" element={<LoginPage />} />
-            <Route path="/privacy-policy" element={<AboutPage />} />
-            <Route path="/terms" element={<AboutPage />} />
-            <Route path="/refund-policy" element={<AboutPage />} />
-            <Route path="/disclaimer" element={<AboutPage />} />
+            <Route path="/privacy-policy" element={<LegalPage slug="privacy" />} />
+            <Route path="/terms" element={<LegalPage slug="terms" />} />
+            <Route path="/refund-policy" element={<LegalPage slug="refund" />} />
+            <Route path="/disclaimer" element={<LegalPage slug="disclaimer" />} />
           </Routes>
         </Router>
       </DashboardProvider>

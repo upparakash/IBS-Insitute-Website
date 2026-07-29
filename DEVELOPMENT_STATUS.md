@@ -1,8 +1,10 @@
 # IBS Institute of Banking Studies — Website Development Status
 
-**Last Updated:** 27 June 2026  
+**Last Updated:** 17 July 2026
 **Stack:** React 19 + Vite · Tailwind CSS · React Router DOM v6 · Framer Motion · React Icons  
 **Working Directory:** `c:\Users\ADMIN\OneDrive\Desktop\IBS Insitute Website\IBS Institute Website`
+
+> See **`LIVE_SITE_DATA_AUDIT.md`** for a detailed log of what content has been verified against the real `ibsbankcareer.in` vs. what's still placeholder/fabricated (Contact info, legal pages, Blog, Testimonials, Gallery, Results, course catalog).
 
 ---
 
@@ -292,7 +294,7 @@ This is the entire next phase of work. Nothing below exists yet.
 
 ### 3.8 WhatsApp Integration
 - [ ] WhatsApp Business API for automated enrollment messages
-- [ ] Currently all WhatsApp links are hardcoded to `wa.me/918138962298`
+- [ ] Currently all WhatsApp links go through `SITE.whatsapp` (`917592000790` — the real number, confirmed against the live site's floating WhatsApp button) but are still just `wa.me` links, not a real Business API integration
 
 ### 3.9 SEO & Performance
 - [ ] `SEOHead` component already exists — needs real meta per page
@@ -318,8 +320,11 @@ This is the entire next phase of work. Nothing below exists yet.
 | Auth context is mock — anyone can "login" as admin | `src/context/AuthContext.jsx` | High (Phase 3) |
 | Enroll Now links go to `/enroll?course=X` which renders `ContactPage` | `App.jsx` line 137 | Medium |
 | `/enquire` route in header doesn't exist — will 404 | `src/components/Header.jsx` | Low |
-| Gallery page has placeholder images | `src/pages/GalleryPage.jsx` | Low |
-| Old `ibsbankcareer.in` site returns 404 on most pages | External | N/A |
+| Gallery page has placeholder images (still, as of 17 Jul 2026) | `src/pages/GalleryPage.jsx` | Low |
+| Testimonials are fabricated — real ones exist on live site, not yet pulled in | `src/pages/TestimonialsPage.jsx` | Medium — see `LIVE_SITE_DATA_AUDIT.md` |
+| Results page has no real topper names | `src/pages/ResultsPage.jsx` | Medium — see `LIVE_SITE_DATA_AUDIT.md` |
+| Footer says "since 2012," everywhere else correctly says "since 2011" | `src/components/Footer.jsx` | Low |
+| Course prices in `courseListingData.js` are illustrative — live site doesn't publicly display prices, so these can't be source-verified | `src/data/courseListingData.js` | N/A (unfixable from source) |
 
 ---
 
@@ -386,3 +391,5 @@ This is the entire next phase of work. Nothing below exists yet.
 | Session 1 | 27 Jun 2026 | Phase 1: Header, TopBar, Ticker, NAV_LINKS restructure, phone numbers |
 | Session 2 | 27 Jun 2026 | Phase 2: All 21 exam pages (examData.js + ExamPage.jsx), all 10 course detail pages (coursePageData.js + CourseDetailPage.jsx), FreeResourcesPage, InterviewPage, BooksPage, AppPage, Admin pages (ExamsAdminPage, ResourcesAdminPage), CoursesPage Enroll+Details buttons, App.jsx routes |
 | Session 3 | 27 Jun 2026 | siteData COURSES updated to 10 courses, bank-po added to coursePageData, Courses nav dropdown reverted to flat list, Exams nav converted to two-panel mega menu (MegaMenu component in Header.jsx) |
+| Session 4 | 5 Jul 2026 | SEO optimization + data corrections — SEOHead added to all pages, JSON-LD, dates/durations corrected (see memory `project_seo_data`) |
+| Session 5 | 16–17 Jul 2026 | Added YouTube Channels nav item + `/more/youtube-channels` page (also fixed a real bug: external nav links were silently broken by React Router `<Link>`). Corrected Contact page + `SITE` object against the live site's real phone/email/WhatsApp/address/social data and fixed the Contact page map (was pointing at Connaught Place, Delhi). Full live-site data audit: built real Legal pages (Privacy/Terms/Refund from real text, Disclaimer written fresh since the live site's own disclaimer page is broken lorem-ipsum), replaced 4 fabricated blog posts with the 6 real ones from the live site, split "Foundation Course (SIDDHI)" and "Diploma in Banking & Finance" out of a buried `others` course category into their own tabs. Full detail in `LIVE_SITE_DATA_AUDIT.md`. |

@@ -21,7 +21,7 @@ const COURSE_LINKS = [
   { label: 'SSC CGL / CHSL', href: '/courses/ssc' },
   { label: 'Internal Promotions', href: '/courses/internal-promotions' },
   { label: 'DRA Certification', href: '/courses/dra' },
-  { label: 'Mock Tests', href: '/mock-tests' },
+  { label: 'Explore All Courses', href: '/mock-tests' },
 ];
 
 const LEGAL_LINKS = [

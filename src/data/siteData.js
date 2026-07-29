@@ -2,21 +2,21 @@ export const SITE = {
   name: 'IBS Bank Career',
   tagline: "India's #1 Banking & Finance Coaching Institute",
   url: 'https://ibsbankcareer.in',
-  phone: '+91-944 787 3644',
-  phone2: '+91-755 90 00081',
-  phone3: '+91 94478 73644',
+  phone: '+91-813 896 2298',
+  phone2: '+91-755 900 0083',
+  phone3: '+91-9447873644',
   phone4: '0479-2445593',
-  email: 'info@ibsbankcareer.in',
+  email: 'mail@ibsbankcareer.in',
   address: 'Center Point, KP Road, Kayamkulam - 690502, Allepey, Kerala',
-  address2: 'PTC Tower, SS Kovil Rd, Thampanoor, Thiruvananthapuram, Kerala 695001',
-  whatsapp: '918138962298',
+  address2: 'PTC Tower, SS Kovil Rd, Thampanoor, Thiruvananthapuram, Kerala 695001, India',
+  whatsapp: '917592000790',
   social: {
     youtube: 'https://youtube.com/@ibsbankcareer',
     telegram: 'https://t.me/ibsbankcareer',
-    instagram: 'https://instagram.com/ibsbankcareer',
-    facebook: 'https://facebook.com/ibsbankcareer',
-    twitter: 'https://twitter.com/ibsbankcareer',
-    linkedin: 'https://linkedin.com/company/ibsbankcareer',
+    instagram: 'https://www.instagram.com/ibsbankcareer_',
+    facebook: 'https://www.facebook.com/ibsbankcareer',
+    twitter: 'https://x.com/ibsbankcareer',
+    linkedin: 'https://www.linkedin.com/company/institute',
   },
 };
 
@@ -44,24 +44,96 @@ export const STATS = [
 
 export const NAV_LINKS = [
   {
-    label: 'Exams',
+    label: 'Competitive Exams',
     categories: [
       {
-        heading: 'Bank & Insurance',
+        heading: 'Bank Exams',
+        // Bank Exams is sub-grouped: each `group` renders as its own labelled
+        // block inside the mega-menu right panel (and a nested mobile accordion).
+        groups: [
+          {
+            heading: 'SBI Exams',
+            items: [
+              { label: 'SBI PO', href: '/exam-hub/sbi-po' },
+              { label: 'SBI CBO', href: '/exam-hub/sbi-cbo' },
+              { label: 'SBI Junior Associates', href: '/exam-hub/sbi-junior-associates' },
+              { label: 'SBI SO', href: '/exam-hub/sbi-so' },
+            ],
+          },
+          {
+            heading: 'IBPS Exams',
+            items: [
+              { label: 'IBPS PO/MT', href: '/exam-hub/ibps-po' },
+              { label: 'IBPS SO', href: '/exam-hub/ibps-so' },
+              { label: 'IBPS Clerical Cadre', href: '/exam-hub/ibps-clerk' },
+              { label: 'IBPS RRB PO', href: '/exam-hub/rrb-po' },
+              { label: 'IBPS RRB Office Assistant', href: '/exam-hub/rrb-clerk' },
+            ],
+          },
+          {
+            heading: 'LBO Exams',
+            items: [
+              { label: 'Bank of Baroda LBO', href: '/exam-hub/bob-lbo' },
+              { label: 'Punjab National Bank LBO', href: '/exam-hub/pnb-lbo' },
+              { label: 'Union Bank of India LBO', href: '/exam-hub/union-bank-lbo' },
+              { label: 'Indian Bank LBO', href: '/exam-hub/indian-bank-lbo' },
+              { label: 'Punjab & Sindh Bank LBO', href: '/exam-hub/punjab-sindh-bank-lbo' },
+            ],
+          },
+          {
+            heading: 'Apprentice Exams',
+            // NOTE: markup specified 5 banks but only 4 were named — 5th pending
+            // team confirmation. Add the 5th bank here once confirmed.
+            items: [
+              { label: 'Central Bank of India', href: '/exam-hub/central-bank-apprentice' },
+              { label: 'Bank of Baroda', href: '/exam-hub/bob-apprentice' },
+              { label: 'Union Bank of India', href: '/exam-hub/union-bank-apprentice' },
+              { label: 'Indian Overseas Bank', href: '/exam-hub/iob-apprentice' },
+            ],
+          },
+          {
+            heading: 'Private Bank Exams',
+            items: [
+              { label: 'South Indian Bank PO', href: '/exam-hub/south-indian-bank-po' },
+              { label: 'South Indian Bank Clerk', href: '/exam-hub/south-indian-bank-clerk' },
+              { label: 'Karnataka Bank PO', href: '/exam-hub/karnataka-bank-po' },
+              { label: 'Karnataka Bank Clerk', href: '/exam-hub/karnataka-bank-clerk' },
+              { label: 'Nainital Bank PO', href: '/exam-hub/nainital-bank-po' },
+              { label: 'Nainital Bank Clerk', href: '/exam-hub/nainital-bank-clerk' },
+            ],
+          },
+          {
+            heading: 'Other Bank Exams',
+            items: [
+              { label: 'IDBI Junior Assistant Manager', href: '/exam-hub/idbi-jam' },
+              { label: 'IDBI Executives', href: '/exam-hub/idbi-executive' },
+              { label: 'IDBI SO', href: '/exam-hub/idbi-so' },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Insurance Exams',
         items: [
-          { label: 'SBI PO', href: '/exam-hub/sbi-po' },
-          { label: 'SBI Clerk', href: '/exam-hub/sbi-clerk' },
-          { label: 'IBPS PO', href: '/exam-hub/ibps-po' },
-          { label: 'IBPS Clerk', href: '/exam-hub/ibps-clerk' },
-          { label: 'RRB PO', href: '/exam-hub/rrb-po' },
-          { label: 'RRB Clerk', href: '/exam-hub/rrb-clerk' },
           { label: 'LIC AAO', href: '/exam-hub/lic-aao' },
+          { label: 'LIC Assistant', href: '/exam-hub/lic-assistant' },
           { label: 'LIC ADO', href: '/exam-hub/lic-ado' },
           { label: 'NICL AO', href: '/exam-hub/nicl-ao' },
           { label: 'NICL Assistant', href: '/exam-hub/nicl-assistant' },
           { label: 'NIACL AO', href: '/exam-hub/niacl-ao' },
           { label: 'NIACL Assistant', href: '/exam-hub/niacl-assistant' },
-          { label: 'SBI Apprentice', href: '/exam-hub/sbi-apprentice' },
+        ],
+      },
+      {
+        heading: 'Regulatory Bodies Exams',
+        items: [
+          { label: 'RBI Grade B Officer', href: '/exam-hub/rbi-grade-b' },
+          { label: 'RBI Assistant', href: '/exam-hub/rbi-assistant' },
+          { label: 'NABARD Grade A & B Officer', href: '/exam-hub/nabard-grade-a-b' },
+          { label: 'EXIM Bank Exam', href: '/exam-hub/exim-bank' },
+          { label: 'SEBI Grade A', href: '/exam-hub/sebi-grade-a' },
+          { label: 'IRDAI Assistant Manager', href: '/exam-hub/irdai-assistant-manager' },
+          { label: 'IFSCA Grade A', href: '/exam-hub/ifsca-grade-a' },
         ],
       },
       {
@@ -81,16 +153,15 @@ export const NAV_LINKS = [
         ],
       },
       {
-        heading: 'Regulatory Bodies',
+        heading: 'Other Exams',
         items: [
-          { label: 'RBI Grade B', href: '/exam-hub/rbi-grade-b' },
-          { label: 'RBI Assistant', href: '/exam-hub/rbi-assistant' },
+          { label: 'More exams coming soon', href: '/exam-hub/other-exams' },
         ],
       },
     ],
   },
   {
-    label: 'Courses',
+    label: 'Courses for Bankers',
     children: [
       { label: 'JAIIB / DB&F', href: '/courses/jaiib', icon: '🏦', badge: 'Popular' },
       { label: 'CAIIB', href: '/courses/caiib', icon: '🏛️' },
@@ -182,7 +253,7 @@ export const NAV_LINKS = [
       },
     ],
   },
-  { label: 'Mock Tests', href: '/mock-tests' },
+  { label: 'Enroll Now', href: '/mock-tests' },
   { label: 'IBS Vigyan App', href: '/app' },
   {
     label: 'Interview',
@@ -193,7 +264,7 @@ export const NAV_LINKS = [
     ],
   },
   {
-    label: 'Books',
+    label: 'Buy Books',
     children: [
       { label: 'Bank Exams', href: '/books/bank-exams' },
       { label: 'JAIIB Book Set', href: '/books/jaiib' },
@@ -213,7 +284,7 @@ export const NAV_LINKS = [
   {
     label: 'More',
     children: [
-      { label: 'YouTube Channels', href: 'https://youtube.com/@ibsbankcareer' },
+      { label: 'YouTube Channels', href: '/more/youtube-channels' },
       { label: 'Blogs', href: '/blog' },
       { label: 'Articles', href: '/more/articles' },
       { label: 'Others', href: '/more/others' },
@@ -1099,43 +1170,63 @@ export const TESTIMONIALS = [
 export const BLOGS = [
   {
     id: 1,
-    title: 'JAIIB & CAIIB 2026 Crash Batches — Boost Your Banking Career',
+    title: 'SBI PO 2026 Notification Released: 1,500 Vacancies Announced — Complete Guide for Aspirants',
+    category: 'SBI',
+    excerpt: 'The much-awaited SBI Probationary Officer 2026 notification is out — 1,500 vacancies, online applications open 18 June to 8 July 2026. Eligibility, selection process and important dates inside.',
+    date: 'June 19, 2026',
+    readTime: '6 min read',
+    color: 'from-blue-600 to-blue-800',
+    href: '/blog/sbi-po-2026-notification',
+  },
+  {
+    id: 2,
+    title: 'Boost Your Banking Career with JAIIB & CAIIB 2026 Crash Batches',
     category: 'JAIIB',
-    excerpt: 'If you\'re aiming to build a successful career in banking, JAIIB & CAIIB 2026 crash batches are now open. Join IBS for intensive preparation with expert faculty.',
-    date: 'June 10, 2026',
+    excerpt: 'IBS is offering JAIIB & CAIIB 2026 Crash Batch (English Medium) courses to help you clear your exams with confidence — live classes, study materials, recorded videos and mock tests. Classes start 11 April 2026.',
+    date: 'March 31, 2026',
     readTime: '5 min read',
     color: 'from-blue-500 to-blue-600',
     href: '/blog/jaiib-caiib-2026-crash-batches',
   },
   {
-    id: 2,
-    title: 'RBI Assistant 2026 — Recruitment Notification Out',
+    id: 3,
+    title: 'RBI Assistant Recruitment 2025 — Panel Year',
     category: 'RBI',
-    excerpt: 'The Reserve Bank of India has officially announced the RBI Assistant 2026 recruitment. Check eligibility, vacancy details and selection process.',
-    date: 'June 8, 2026',
+    excerpt: 'The Reserve Bank of India has announced recruitment for Assistant positions across regional offices. Age limit 20–28 years, three-stage selection including a language proficiency test.',
+    date: 'February 19, 2026',
     readTime: '6 min read',
     color: 'from-yellow-500 to-orange-500',
-    href: '/blog/rbi-assistant-2026',
-  },
-  {
-    id: 3,
-    title: 'State Bank of India — Clerk Notification 2026',
-    category: 'SBI',
-    excerpt: 'Applications are invited from eligible Indian Citizens for appointment as Junior Associates in State Bank of India. Read the complete notification here.',
-    date: 'June 5, 2026',
-    readTime: '7 min read',
-    color: 'from-blue-600 to-blue-800',
-    href: '/blog/sbi-clerk-2026',
+    href: '/blog/rbi-assistant-2025-panel-year',
   },
   {
     id: 4,
-    title: 'IBPS Clerk 2026 Notification Out — Apply Now',
+    title: 'State Bank of India — Junior Associate (Clerk) Notification',
+    category: 'SBI',
+    excerpt: 'Applications invited from eligible Indian citizens for Junior Associate (Customer Support & Sales) clerical cadre posts in SBI. Age 20–28 years, prelims tentatively September 2025.',
+    date: 'August 7, 2025',
+    readTime: '7 min read',
+    color: 'from-blue-600 to-blue-800',
+    href: '/blog/sbi-clerk-junior-associate-notification',
+  },
+  {
+    id: 5,
+    title: 'IBPS CRP CSA-XV — Customer Service Associate (Clerk) Applications Invited',
     category: 'IBPS',
-    excerpt: 'Applications are invited from eligible and interested candidates for recruitment of Clerks in Public Sector Banks. IBPS Clerk 2026 notification analysis.',
-    date: 'June 2, 2026',
+    excerpt: 'Common Recruitment Process for Customer Service Associates across 11 public sector banks including Bank of Baroda, Canara Bank, PNB and Union Bank. Apply online 1–21 August 2025.',
+    date: 'August 4, 2025',
     readTime: '8 min read',
     color: 'from-green-500 to-green-600',
-    href: '/blog/ibps-clerk-2026',
+    href: '/blog/ibps-crp-csa-xv-clerk-notification',
+  },
+  {
+    id: 6,
+    title: 'Bank of Baroda — Recruitment on Fixed Term Contractual Basis',
+    category: 'Bank PO',
+    excerpt: 'Bank of Baroda invites applications for various departments on a 5-year renewable contract. Minimum CIBIL score of 680 required; online registration closes 19 August 2025.',
+    date: 'July 31, 2025',
+    readTime: '5 min read',
+    color: 'from-rose-500 to-rose-700',
+    href: '/blog/bank-of-baroda-fixed-term-recruitment',
   },
 ];
 

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(netstat -ano)",
+      "WebFetch(domain:ibsbankcareer.in)",
+      "Bash(npx eslint *)",
+      "Bash(curl -s -A Mozilla/5.0 https://ibsbankcareer.in/product/single/jaiib -o C:/Users/ADMIN/AppData/Local/Temp/claude/c--Users-ADMIN-OneDrive-Desktop-IBS-Insitute-Website-IBS-Institute-Website/b4b3d148-74fe-411d-954e-d4cac196f5de/scratchpad/jaiib_product.html --max-time 20)",
+      "Bash(node \"C:/Users/ADMIN/AppData/Local/Temp/claude/c--Users-ADMIN-OneDrive-Desktop-IBS-Insitute-Website-IBS-Institute-Website/b4b3d148-74fe-411d-954e-d4cac196f5de/scratchpad/check_price.mjs\")",
+      "Bash(node \"C:/Users/ADMIN/AppData/Local/Temp/claude/c--Users-ADMIN-OneDrive-Desktop-IBS-Insitute-Website-IBS-Institute-Website/b4b3d148-74fe-411d-954e-d4cac196f5de/scratchpad/check_price2.mjs\")",
+      "Bash(node \"C:/Users/ADMIN/AppData/Local/Temp/claude/c--Users-ADMIN-OneDrive-Desktop-IBS-Insitute-Website-IBS-Institute-Website/b4b3d148-74fe-411d-954e-d4cac196f5de/scratchpad/check_course_menu.mjs\")",
+      "Bash(awk '{print $5}')",
+      "Bash(taskkill //PID 16360 //F)"
+    ]
+  }
+}

@@ -3,16 +3,33 @@ import { Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaSearch, FaShoppingCart, FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import { NAV_LINKS } from '../data/siteData';
 
+/* ─── Single exam link row used across the mega-menu right panel ────────── */
+function MegaLink({ child }) {
+  return (
+    <Link
+      to={child.href}
+      className="block px-3 py-1.5 text-sm leading-snug text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-all"
+    >
+      {child.label}
+    </Link>
+  );
+}
+
 /* ─── Two-panel mega menu: categories left, items right ────────────────── */
 function MegaMenu({ item }) {
-  const [activeCat, setActiveCat] = useState(0);
+  const [activeCat, setActiveCat] = useState(null);
+  const active = activeCat !== null ? item.categories[activeCat] : null;
+  const grouped = Boolean(active?.groups);
 
   return (
-    <div className="absolute top-full left-0 hidden group-hover:block z-50 pt-2">
-      <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 flex overflow-hidden" style={{ minWidth: '380px' }}>
+    <div
+      className="absolute top-full left-0 hidden group-hover:block z-50 pt-2"
+      onMouseLeave={() => setActiveCat(null)}
+    >
+      <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 flex overflow-hidden">
 
-        {/* Left panel — category list */}
-        <div className="bg-gray-50 border-r border-gray-100 py-2 shrink-0" style={{ width: '168px' }}>
+        {/* Left panel — category list (shown as soon as the nav item is hovered) */}
+        <div className="bg-gray-50 border-r border-gray-100 py-2 shrink-0" style={{ width: '188px' }}>
           <div className="px-4 py-2 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
             {item.label}
           </div>
@@ -35,27 +52,39 @@ function MegaMenu({ item }) {
           ))}
         </div>
 
-        {/* Right panel — items for active category */}
-        <div className="py-2 flex-1">
-          <div className="px-4 py-2 text-[10px] font-bold text-primary/60 uppercase tracking-widest border-b border-gray-100 mb-1">
-            {item.categories[activeCat]?.heading}
+        {/* Right panel — only appears once a category (e.g. Bank Exams) is hovered */}
+        {active && (
+          <div className="py-3" style={{ width: grouped ? '720px' : '280px' }}>
+            <div className="px-5 pb-2.5 mb-2 text-[10px] font-bold text-primary/60 uppercase tracking-widest border-b border-gray-100">
+              {active.heading}
+            </div>
+
+            {grouped ? (
+              /* Sub-grouped: each group in its own labelled column (Bank Exams) */
+              <div className="px-3 grid grid-cols-3 gap-x-6 gap-y-5">
+                {active.groups.map((group) => (
+                  <div key={group.heading}>
+                    <div className="px-3 pb-1.5 text-[11px] font-bold text-gray-400 uppercase tracking-wide">
+                      {group.heading}
+                    </div>
+                    <div className="flex flex-col gap-0.5">
+                      {group.items.map((child) => (
+                        <MegaLink key={child.label} child={child} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              /* Flat list of items */
+              <div className="px-3 flex flex-col gap-0.5">
+                {active.items.map((child) => (
+                  <MegaLink key={child.label} child={child} />
+                ))}
+              </div>
+            )}
           </div>
-          <div className="px-2">
-            {item.categories[activeCat]?.items.map((child) => (
-              <Link
-                key={child.label}
-                to={child.href}
-                className="flex items-center justify-between px-3 py-2 text-sm text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-all group/item"
-              >
-                <span>{child.label}</span>
-                <FaChevronRight
-                  size={8}
-                  className="text-gray-300 group-hover/item:text-primary transition-colors shrink-0"
-                />
-              </Link>
-            ))}
-          </div>
-        </div>
+        )}
 
       </div>
     </div>
@@ -82,17 +111,39 @@ function MobileCategoryMenu({ item, closeMobile }) {
           </button>
           {openCat === i && (
             <div className="ml-3 flex flex-col gap-0.5 pb-1">
-              {cat.items.map((child) => (
-                <Link
-                  key={child.label}
-                  to={child.href}
-                  onClick={closeMobile}
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition-all"
-                >
-                  <span className="w-1 h-1 rounded-full bg-primary/40 shrink-0" />
-                  {child.label}
-                </Link>
-              ))}
+              {cat.groups ? (
+                /* Sub-grouped category (Bank Exams): heading label + its items */
+                cat.groups.map((group) => (
+                  <div key={group.heading}>
+                    <div className="px-4 pt-2 pb-1 text-[11px] font-bold text-gray-500 uppercase tracking-wide">
+                      {group.heading}
+                    </div>
+                    {group.items.map((child) => (
+                      <Link
+                        key={child.label}
+                        to={child.href}
+                        onClick={closeMobile}
+                        className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition-all"
+                      >
+                        <span className="w-1 h-1 rounded-full bg-primary/40 shrink-0" />
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                ))
+              ) : (
+                cat.items.map((child) => (
+                  <Link
+                    key={child.label}
+                    to={child.href}
+                    onClick={closeMobile}
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition-all"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-primary/40 shrink-0" />
+                    {child.label}
+                  </Link>
+                ))
+              )}
             </div>
           )}
         </div>

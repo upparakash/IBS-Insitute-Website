@@ -1,8 +1,22 @@
 import { useState } from 'react';
 import Layout from '../layouts/Layout';
 import SEOHead from '../components/SEOHead';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaPaperPlane } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaPaperPlane, FaMapMarkedAlt } from 'react-icons/fa';
 import { SITE } from '../data/siteData';
+
+const REGIONAL_CENTRES = [
+  { city: 'Trivandrum' },
+  { city: 'Ernakulam' },
+  { city: 'Calicut' },
+  { city: 'Chennai', address: 'Shaajith Tower, Door No. 58, 2nd Floor, No. 4(14), Poonamalli High Road, Aminjikarai, Chennai, Tamil Nadu – 600029' },
+  { city: 'Hyderabad', address: 'Babu Khan Estate, 1107, Alimineti Madhava Reddy Flyover, Fateh Maidan, Basheer Bagh, Hyderabad, Telangana – 500001' },
+  { city: 'Pune' },
+  { city: 'Ahmedabad' },
+  { city: 'Vijayawada', address: 'Maruthi Towers, Sri Natrajan Guljar Road, Venkateswara Puram, Acharya Ranga Nagar, Vijayawada, Andhra Pradesh – 520010' },
+  { city: 'Delhi', address: '205, 2nd Floor, Rajkamal Sadan, Commercial Complex, Preet Vihar, Delhi – 92' },
+  { city: 'Jaipur' },
+  { city: 'Bengaluru' },
+];
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', course: '', message: '' });
@@ -17,8 +31,8 @@ export default function ContactPage() {
   return (
     <Layout>
       <SEOHead
-        title="Contact IBS Bank Career | Kayamkulam Kerala | +91 81389 62298"
-        description="Contact IBS Institute of Banking Studies – Head Office: Kayamkulam, Kerala. Call +91 81389 62298 | +91 75590 00083. WhatsApp, email, and 12 branch offices across Kerala. Enquire about JAIIB, CAIIB, Bank PO courses."
+        title="Contact IBS Bank Career | Kayamkulam Kerala | +91-813 896 2298"
+        description="Contact IBS Institute of Banking Studies – Head Office: Kayamkulam, Kerala. Call +91-813 896 2298 | +91-755 900 0083. WhatsApp, email, and regional centres across India. Enquire about JAIIB, CAIIB, Bank PO courses."
         keywords="IBS Bank Career contact, banking coaching centre Kayamkulam, JAIIB coaching enquiry Kerala, contact banking institute Kerala, IBS phone number address"
         canonical="/contact"
       />
@@ -51,9 +65,9 @@ export default function ContactPage() {
             <div className="glass-card p-6">
               <div className="w-12 h-12 gradient-primary rounded-2xl flex items-center justify-center text-white mb-4"><FaMapMarkerAlt /></div>
               <h3 className="font-heading font-bold text-gray-900 mb-2">Visit Us</h3>
-              <p className="text-gray-600 text-sm font-semibold">Head Office:</p>
+              <p className="text-gray-600 text-sm font-semibold">Head Office</p>
               <p className="text-gray-600 text-sm mb-2">{SITE.address}</p>
-              <p className="text-gray-600 text-sm font-semibold">Corporate Office:</p>
+              <p className="text-gray-600 text-sm font-semibold">Corporate Office &amp; Apex Learning Center</p>
               <p className="text-gray-600 text-sm">{SITE.address2}</p>
             </div>
 
@@ -114,16 +128,44 @@ export default function ContactPage() {
               </form>
             </div>
 
-            {/* Map placeholder */}
+            {/* Map — Head Office, Kayamkulam */}
             <div className="mt-8 h-80 bg-gray-100 rounded-3xl overflow-hidden shadow-xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6630087456!2d77.21836637549805!3d28.634305075674896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd371d97c89f%3A0xfc0d3a0b6b4c4b3e!2sConnaught%20Place%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126256.60520910508!2d76.86212477645928!3d8.545995992329678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05b9e39c624e91%3A0x1a80db42033db74f!2sINSTITUTE%20OF%20BANKING%20STUDIES%20(IBS)!5e0!3m2!1sen!2sin!4v1716810284827!5m2!1sen!2sin"
                 className="w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"
                 title="IBS Bank Career Location"
               />
             </div>
+          </div>
+        </div>
+
+        {/* Regional Centres / Offices */}
+        <div className="container-custom mt-16">
+          <div className="text-center mb-8">
+            <h2 className="font-heading text-2xl font-bold text-gray-900">We're Also At — Our Regional Centres / Offices</h2>
+            <p className="text-gray-500 text-sm mt-1">IBS presence beyond Kerala — reach out to the centre nearest you</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {REGIONAL_CENTRES.map((c) => (
+              <a
+                key={c.city}
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.address ? c.address : `Institute of Banking Studies, ${c.city}`)}`}
+                target="_blank" rel="noopener noreferrer"
+                className="glass-card p-5 hover:shadow-xl transition-shadow flex items-start gap-3"
+              >
+                <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center text-white shrink-0">
+                  <FaMapMarkedAlt size={16} />
+                </div>
+                <div className="min-w-0">
+                  <h3 className="font-heading font-bold text-gray-900">{c.city}</h3>
+                  <p className="text-gray-500 text-xs mt-1 leading-relaxed">
+                    {c.address || 'Institute of Banking Studies (IBS)'}
+                  </p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>

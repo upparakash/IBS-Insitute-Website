@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
 import Layout from '../layouts/Layout';
 import SEOHead from '../components/SEOHead';
 import {
   FaGooglePlay, FaApple, FaStar, FaDownload, FaUsers, FaVideo,
   FaClock, FaBook, FaMobile, FaWifi, FaChartBar, FaCheckCircle,
-  FaArrowRight, FaWhatsapp, FaPlay, FaBell,
+  FaArrowRight, FaWhatsapp, FaPlay, FaBell, FaSignInAlt,
 } from 'react-icons/fa';
 
 const WA_BASE = 'https://wa.me/919447873644';
 const PLAY_STORE = 'https://play.google.com/store/apps';
 const APP_STORE = 'https://www.apple.com/app-store/';
+const LMS_LOGIN = 'https://learn.ibsbankcareer.in/';
 
 const APP_STATS = [
   { value: '50K+', label: 'Downloads', icon: <FaDownload className="text-white" size={20} />, color: 'from-blue-500 to-blue-700' },
@@ -126,6 +126,15 @@ export default function AppPage() {
         <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-white/5 rounded-full blur-2xl" />
 
         <div className="container-custom relative z-10">
+          <div className="flex justify-end mb-6">
+            <a
+              href={LMS_LOGIN}
+              target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white font-semibold text-sm px-5 py-2.5 rounded-xl border border-white/30 backdrop-blur transition-all"
+            >
+              <FaSignInAlt size={14} /> Student Login
+            </a>
+          </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block bg-gold text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6">

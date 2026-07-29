@@ -13,7 +13,9 @@ export const COURSE_CATEGORIES = [
   { id: 'ignou-mba',        label: 'IGNOU MBA',               icon: '🎓' },
   { id: 'dra',              label: 'DRA',                     icon: '📄' },
   { id: 'bc-bf',            label: 'BC-BF',                   icon: '🤝' },
-  { id: 'others',           label: 'Others (NISM)',            icon: '📚' },
+  { id: 'foundation',       label: 'Foundation Course (SIDDHI)', icon: '🚀' },
+  { id: 'dbf',              label: 'Diploma in Banking & Finance', icon: '📘' },
+  { id: 'others',           label: 'NISM Certifications',      icon: '📚' },
 ];
 
 /* ── JAIIB / DB&F ─────────────────────────────────────────────────────────── */
@@ -666,9 +668,13 @@ const OTHERS_COURSES = [
     detailHref: '/courses/others',
     includes: ['Derivatives', 'Research Analyst', 'Investment Adviser', 'Mock Tests'],
   },
+];
+
+/* ── Foundation Course (SIDDHI) ───────────────────────────────────────────── */
+const FOUNDATION_COURSES = [
   {
     id: 'foundation-siddhi',
-    category: 'others',
+    category: 'foundation',
     brand: 'IBS',
     title: 'Foundation Course SIDDHI\n(Banking Career Starter)',
     badge: null,
@@ -677,9 +683,13 @@ const OTHERS_COURSES = [
     detailHref: '/courses/others',
     includes: ['Banking Fundamentals', 'Aptitude Prep', 'English & Reasoning', 'Career Guidance'],
   },
+];
+
+/* ── Diploma in Banking & Finance (DB&F) ──────────────────────────────────── */
+const DBF_COURSES = [
   {
     id: 'diploma-banking',
-    category: 'others',
+    category: 'dbf',
     brand: 'IBS',
     title: 'Diploma in Banking & Finance\n(6 Months Programme)',
     badge: null,
@@ -701,6 +711,8 @@ export const ALL_COURSE_LISTINGS = [
   ...IGNOU_MBA_COURSES,
   ...DRA_COURSES,
   ...BCBF_COURSES,
+  ...FOUNDATION_COURSES,
+  ...DBF_COURSES,
   ...OTHERS_COURSES,
 ];
 

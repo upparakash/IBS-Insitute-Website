@@ -5,21 +5,13 @@ import SEOHead from '../components/SEOHead';
 import { BLOGS } from '../data/siteData';
 import { FaClock, FaCalendarAlt, FaSearch, FaArrowRight, FaTag } from 'react-icons/fa';
 
-const CATEGORIES = ['All', 'JAIIB', 'CAIIB', 'RBI', 'Bank PO', 'Current Affairs', 'SSC'];
-
-const EXTENDED_BLOGS = [
-  ...BLOGS,
-  { id: 5, title: 'IBPS RRB PO 2026 Notification: Complete Analysis & Eligibility', category: 'Bank PO', excerpt: 'IBPS RRB PO 2026 full notification breakdown — vacancies, age limit, qualification, exam pattern and key dates you must know.', date: 'July 2, 2026', readTime: '7 min read', color: 'from-green-500 to-green-600', href: '/blog/ibps-rrb-2026' },
-  { id: 6, title: 'CAIIB BFM Module: Complete Study Strategy 2026', category: 'CAIIB', excerpt: 'Master the BFM (Bank Financial Management) module in CAIIB with this structured, topic-wise study plan used by our toppers.', date: 'June 28, 2026', readTime: '9 min read', color: 'from-violet-500 to-violet-600', href: '/blog/caiib-bfm-strategy' },
-  { id: 7, title: 'JAIIB November 2026: 4-Paper Strategy & Study Plan', category: 'JAIIB', excerpt: 'Complete study strategy for JAIIB November 2026 — paper-wise prioritisation, revision schedule and last-month tips from IBS toppers.', date: 'June 25, 2026', readTime: '8 min read', color: 'from-red-500 to-red-600', href: '/blog/jaiib-nov-2026-strategy' },
-  { id: 8, title: 'Banking Terminology Glossary: 200 Must-Know Terms for JAIIB & CAIIB', category: 'JAIIB', excerpt: 'Comprehensive banking glossary covering JAIIB, CAIIB and banking interview terms — from NPA to Basel norms to digital banking.', date: 'June 20, 2026', readTime: '15 min read', color: 'from-teal-500 to-teal-600', href: '/blog/banking-glossary' },
-];
+const CATEGORIES = ['All', 'SBI', 'IBPS', 'JAIIB', 'CAIIB', 'RBI', 'Bank PO'];
 
 export default function BlogPage() {
   const [category, setCategory] = useState('All');
   const [search, setSearch] = useState('');
 
-  const filtered = EXTENDED_BLOGS.filter(b =>
+  const filtered = BLOGS.filter(b =>
     (category === 'All' || b.category === category) &&
     (search === '' || b.title.toLowerCase().includes(search.toLowerCase()))
   );

@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const SLIDES = [
@@ -75,6 +76,14 @@ export default function HeroSection() {
           className="block md:hidden w-full h-auto object-cover"
         />
       </div>
+
+      {/* Enquire Now CTA — overlaid on the banner, mirrors the header button */}
+      <Link
+        to="/enquire"
+        className="absolute left-4 sm:left-8 md:left-12 bottom-10 sm:bottom-14 md:bottom-16 z-20 btn-gold text-sm sm:text-base py-2.5 px-6 sm:px-8 shadow-xl hover:scale-105 transition-transform"
+      >
+        Enquire Now
+      </Link>
 
       {/* Left arrow */}
       <button
